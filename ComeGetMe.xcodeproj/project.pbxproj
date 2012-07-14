@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B19F508815B12AF100AFD8E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508715B12AF100AFD8E8 /* UIKit.framework */; };
+		B19F508A15B12AF100AFD8E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508915B12AF100AFD8E8 /* Foundation.framework */; };
+		B19F508C15B12AF100AFD8E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508B15B12AF100AFD8E8 /* CoreGraphics.framework */; };
+		B19F509215B12AF100AFD8E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B19F509015B12AF100AFD8E8 /* InfoPlist.strings */; };
+		B19F509415B12AF100AFD8E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F509315B12AF100AFD8E8 /* main.m */; };
+		B19F509815B12AF100AFD8E8 /* HelloWorldAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F509715B12AF100AFD8E8 /* HelloWorldAppDelegate.m */; };
+		B19F509B15B12AF100AFD8E8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F509915B12AF100AFD8E8 /* MainStoryboard.storyboard */; };
+		B19F509E15B12AF100AFD8E8 /* HelloWorldMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F509D15B12AF100AFD8E8 /* HelloWorldMasterViewController.m */; };
+		B19F50A115B12AF100AFD8E8 /* HelloWorldDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F50A015B12AF100AFD8E8 /* HelloWorldDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B19F508315B12AF000AFD8E8 /* ComeGetMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComeGetMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B19F508715B12AF100AFD8E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B19F508915B12AF100AFD8E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B19F508B15B12AF100AFD8E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B19F508F15B12AF100AFD8E8 /* ComeGetMe-Info.plist */ = {isa = PBXFileReference; path = "ComeGetMe-Info.plist"; sourceTree = "<group>"; };
+		B19F509115B12AF100AFD8E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B19F509315B12AF100AFD8E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B19F509515B12AF100AFD8E8 /* ComeGetMe-Prefix.pch */ = {isa = PBXFileReference; path = "ComeGetMe-Prefix.pch"; sourceTree = "<group>"; };
+		B19F509615B12AF100AFD8E8 /* HelloWorldAppDelegate.h */ = {isa = PBXFileReference; path = HelloWorldAppDelegate.h; sourceTree = "<group>"; };
+		B19F509715B12AF100AFD8E8 /* HelloWorldAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldAppDelegate.m; sourceTree = "<group>"; };
+		B19F509A15B12AF100AFD8E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		B19F509C15B12AF100AFD8E8 /* HelloWorldMasterViewController.h */ = {isa = PBXFileReference; path = HelloWorldMasterViewController.h; sourceTree = "<group>"; };
+		B19F509D15B12AF100AFD8E8 /* HelloWorldMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldMasterViewController.m; sourceTree = "<group>"; };
+		B19F509F15B12AF100AFD8E8 /* HelloWorldDetailViewController.h */ = {isa = PBXFileReference; path = HelloWorldDetailViewController.h; sourceTree = "<group>"; };
+		B19F50A015B12AF100AFD8E8 /* HelloWorldDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B19F508015B12AF000AFD8E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B19F508815B12AF100AFD8E8 /* UIKit.framework in Frameworks */,
+				B19F508A15B12AF100AFD8E8 /* Foundation.framework in Frameworks */,
+				B19F508C15B12AF100AFD8E8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B19F507815B12AF000AFD8E8 = {
+			isa = PBXGroup;
+			children = (
+				B19F508D15B12AF100AFD8E8 /* ComeGetMe */,
+				B19F508615B12AF000AFD8E8 /* Frameworks */,
+				B19F508415B12AF000AFD8E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B19F508415B12AF000AFD8E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B19F508315B12AF000AFD8E8 /* ComeGetMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B19F508615B12AF000AFD8E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B19F508715B12AF100AFD8E8 /* UIKit.framework */,
+				B19F508915B12AF100AFD8E8 /* Foundation.framework */,
+				B19F508B15B12AF100AFD8E8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B19F508D15B12AF100AFD8E8 /* ComeGetMe */ = {
+			isa = PBXGroup;
+			children = (
+				B19F509615B12AF100AFD8E8 /* HelloWorldAppDelegate.h */,
+				B19F509715B12AF100AFD8E8 /* HelloWorldAppDelegate.m */,
+				B19F509915B12AF100AFD8E8 /* MainStoryboard.storyboard */,
+				B19F509C15B12AF100AFD8E8 /* HelloWorldMasterViewController.h */,
+				B19F509D15B12AF100AFD8E8 /* HelloWorldMasterViewController.m */,
+				B19F509F15B12AF100AFD8E8 /* HelloWorldDetailViewController.h */,
+				B19F50A015B12AF100AFD8E8 /* HelloWorldDetailViewController.m */,
+				B19F508E15B12AF100AFD8E8 /* Supporting Files */,
+			);
+			path = ComeGetMe;
+			sourceTree = "<group>";
+		};
+		B19F508E15B12AF100AFD8E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B19F508F15B12AF100AFD8E8 /* ComeGetMe-Info.plist */,
+				B19F509015B12AF100AFD8E8 /* InfoPlist.strings */,
+				B19F509315B12AF100AFD8E8 /* main.m */,
+				B19F509515B12AF100AFD8E8 /* ComeGetMe-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B19F508215B12AF000AFD8E8 /* ComeGetMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B19F50A415B12AF100AFD8E8 /* Build configuration list for PBXNativeTarget "ComeGetMe" */;
+			buildPhases = (
+				B19F507F15B12AF000AFD8E8 /* Sources */,
+				B19F508015B12AF000AFD8E8 /* Frameworks */,
+				B19F508115B12AF000AFD8E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ComeGetMe;
+			productName = ComeGetMe;
+			productReference = B19F508315B12AF000AFD8E8 /* ComeGetMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B19F507A15B12AF000AFD8E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HelloWorld;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Aeroflex;
+			};
+			buildConfigurationList = B19F507D15B12AF000AFD8E8 /* Build configuration list for PBXProject "ComeGetMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B19F507815B12AF000AFD8E8;
+			productRefGroup = B19F508415B12AF000AFD8E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B19F508215B12AF000AFD8E8 /* ComeGetMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B19F508115B12AF000AFD8E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B19F509215B12AF100AFD8E8 /* InfoPlist.strings in Resources */,
+				B19F509B15B12AF100AFD8E8 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B19F507F15B12AF000AFD8E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B19F509415B12AF100AFD8E8 /* main.m in Sources */,
+				B19F509815B12AF100AFD8E8 /* HelloWorldAppDelegate.m in Sources */,
+				B19F509E15B12AF100AFD8E8 /* HelloWorldMasterViewController.m in Sources */,
+				B19F50A115B12AF100AFD8E8 /* HelloWorldDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B19F509015B12AF100AFD8E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B19F509115B12AF100AFD8E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B19F509915B12AF100AFD8E8 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B19F509A15B12AF100AFD8E8 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B19F50A215B12AF100AFD8E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B19F50A315B12AF100AFD8E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B19F50A515B12AF100AFD8E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ComeGetMe/ComeGetMe-Prefix.pch";
+				INFOPLIST_FILE = "ComeGetMe/ComeGetMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B19F50A615B12AF100AFD8E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ComeGetMe/ComeGetMe-Prefix.pch";
+				INFOPLIST_FILE = "ComeGetMe/ComeGetMe-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B19F507D15B12AF000AFD8E8 /* Build configuration list for PBXProject "ComeGetMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B19F50A215B12AF100AFD8E8 /* Debug */,
+				B19F50A315B12AF100AFD8E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B19F50A415B12AF100AFD8E8 /* Build configuration list for PBXNativeTarget "ComeGetMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B19F50A515B12AF100AFD8E8 /* Debug */,
+				B19F50A615B12AF100AFD8E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B19F507A15B12AF000AFD8E8 /* Project object */;
+}
