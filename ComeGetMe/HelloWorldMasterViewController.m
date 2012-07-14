@@ -30,6 +30,7 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
@@ -49,13 +50,14 @@
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
-    [_objects insertObject:[NSDate date] atIndex:0];
+//    [_objects insertObject:[NSDate date] atIndex:0];
+    [_objects insertObject: @"Hello World" atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
-                          withRowAnimation:UITableViewRowAnimationAutomatic];
+                          withRowAnimation:UITableViewRowAnimationLeft];
 }
 
-#pragma mark - Table View
+#pragma mark - Table Viewe
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -69,10 +71,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell2"];
+    NSString* object = [_objects objectAtIndex:indexPath.row];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell2"];
+        //cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.detailTextLabel.text = @"Mobile";
+        cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
+    }
+    
+//    NSDate *object = [_objects objectAtIndex:indexPath.row];
     cell.textLabel.text = [object description];
+
     return cell;
 }
 
