@@ -7,11 +7,13 @@
 //
 
 #import "HelloWorldMasterViewController.h"
-
 #import "HelloWorldDetailViewController.h"
+#import "BAContact.h"
 
 @interface HelloWorldMasterViewController () {
-    NSMutableArray *_objects;
+    NSMutableArray* m_objects;
+//    BAContactCollection* m_contacts;
+    NSMutableArray* m_contacts;
 }
 @end
 
@@ -29,13 +31,27 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(insertNewObject:)];
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(showPicker:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
     [self insertNewRowWithTextLabel:@"Craig Fraser"];
-    [self insertNewRowWithTextLabel:@"Brian Anderson"];
-    [self insertNewRowWithTextLabel:@"Brett Lessing"];
+//    [self insertNewRowWithTextLabel:@"Brian Anderson"];
+//    [self insertNewRowWithTextLabel:@"Brett Lessing"];
+    BAContact* contact = [[BAContact alloc] init];
+    contact.name = @"Craig Fraser";
+    contact.phoneNumber= @"408-873-1001";
+    contact.phoneNumberLabel = @"Mobile";
+    
+    BAContact* contact2 = [[BAContact alloc] initWithName:@"Brian Anderson" PhoneNumber:@"515-708-4355" andLabel:@"iPhone"];
+
+    m_contacts = [[NSMutableArray alloc] init];
+    
+    [m_contacts addObject: contact];
+    [m_contacts addObject: contact2];
+
+    [self buildRowsForContacts];
+    
 }
 
 - (void)viewDidUnload
@@ -50,24 +66,35 @@
 }
 
 
+
 - (void)insertNewObject:(id)sender
 {
-//    if (!_objects) {
-//        _objects = [[NSMutableArray alloc] init];
-//    }
-//    [_objects insertObject: @"Hello World" atIndex:0];
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
-//                          withRowAnimation:UITableViewRowAnimationLeft];
     [self insertNewRowWithTextLabel: @"Hello World"];
+}
+
+
+- (void) buildRowsForContacts
+{
+    for(int i = 0; i < m_contacts.count; ++i)
+    {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+        [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                              withRowAnimation:UITableViewRowAnimationLeft];
+    }
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+//                          withRowAnimation:UITableViewRowAnimationLeft];
+
 }
 
 - (void) insertNewRowWithTextLabel:(NSString*) label
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
+    if (!m_objects) {
+        m_objects = [[NSMutableArray alloc] init];
     }
-    [_objects insertObject: label atIndex:0];
+    
+    [m_objects insertObject: label atIndex:[m_objects count]];
+    
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] 
                           withRowAnimation:UITableViewRowAnimationLeft];
@@ -82,25 +109,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return m_contacts.count;
+    //return m_objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    NSString* object = [_objects objectAtIndex:indexPath.row];
+//    NSString* object = [m_objects objectAtIndex:indexPath.row];
+    BAContact* contact = [m_contacts objectAtIndex:indexPath.row];
     
+    // If we have to create a cell, do it here.
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
-        //cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//        cell.detailTextLabel.textColor = [UIColor lightGrayColor];
-//        cell.textLabel.textColor = [UIColor whiteColor];
     }
     
-//    NSDate *object = [_objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = [object description];
-    cell.detailTextLabel.text = @"Mobile";
+    cell.textLabel.text = contact.name;
+    cell.detailTextLabel.text = contact.phoneNumberLabel;
+    
     return cell;
 }
 
@@ -113,7 +139,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
+        [m_objects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -140,9 +166,75 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = [_objects objectAtIndex:indexPath.row];
+        NSDate *object = [m_objects objectAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
+
+
+
+# pragma mark - User Picker
+
+- (IBAction)showPicker:(id)sender
+{
+    ABPeoplePickerNavigationController *picker = [[ABPeoplePickerNavigationController alloc] init];
+    picker.peoplePickerDelegate = self;
+    
+    [self presentModalViewController:picker animated:YES];
+}
+
+
+- (void)peoplePickerNavigationControllerDidCancel:
+(ABPeoplePickerNavigationController *)peoplePicker
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (BOOL)peoplePickerNavigationController: 
+(ABPeoplePickerNavigationController *)peoplePicker 
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person {
+        
+    return YES;
+}
+
+- (BOOL)peoplePickerNavigationController: (ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                                property:(ABPropertyID)property
+                              identifier:(ABMultiValueIdentifier)identifier
+{
+    [self addPerson:person withProperty:property andIdentifier: identifier];
+    [self dismissModalViewControllerAnimated:YES];
+
+    // Select a property
+    return YES;
+}
+
+
+- (void) addPerson: (ABRecordRef)person
+      withProperty: (ABPropertyID) property
+     andIdentifier:(ABMultiValueIdentifier) identifier {
+    
+    NSString* firstName = (__bridge_transfer NSString*)ABRecordCopyValue(person,kABPersonFirstNameProperty);
+    NSString* lastName = (__bridge_transfer NSString*)ABRecordCopyValue(person,kABPersonLastNameProperty);
+
+    CFIndex selection = ABMultiValueGetIndexForIdentifier(ABRecordCopyValue(person, kABPersonPhoneProperty), identifier);
+    
+    ABMultiValueRef phoneNumbers = ABRecordCopyValue(person, property);
+    CFStringRef phoneLabelRef = ABMultiValueCopyLabelAtIndex(phoneNumbers, selection);
+    
+    NSString* phoneLabel = (__bridge NSString *)(ABAddressBookCopyLocalizedLabel(phoneLabelRef));
+    NSString* phoneNumber = (__bridge_transfer NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, selection);
+
+    NSString* name = [[firstName stringByAppendingString:@" " ] stringByAppendingString: lastName];
+    
+    BAContact* personRecord = [BAContact alloc];
+    [personRecord setPhoneNumber:phoneNumber];
+    [personRecord setPhoneNumberLabel: phoneLabel];
+    [personRecord setName:name];
+    
+    [m_contacts addObject:personRecord];
+}
+
 
 @end

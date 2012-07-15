@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B139CC7815B1D013009EC44C /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B139CC7715B1D013009EC44C /* AddressBookUI.framework */; };
+		B139CC7B15B1D022009EC44C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B139CC7A15B1D022009EC44C /* AddressBook.framework */; };
+		B139CC7E15B1D48B009EC44C /* BAContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B139CC7D15B1D48A009EC44C /* BAContact.m */; };
 		B19F508815B12AF100AFD8E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508715B12AF100AFD8E8 /* UIKit.framework */; };
 		B19F508A15B12AF100AFD8E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508915B12AF100AFD8E8 /* Foundation.framework */; };
 		B19F508C15B12AF100AFD8E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508B15B12AF100AFD8E8 /* CoreGraphics.framework */; };
@@ -19,20 +22,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B139CC7715B1D013009EC44C /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		B139CC7A15B1D022009EC44C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		B139CC7C15B1D48A009EC44C /* BAContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAContact.h; sourceTree = "<group>"; };
+		B139CC7D15B1D48A009EC44C /* BAContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAContact.m; sourceTree = "<group>"; };
 		B19F508315B12AF000AFD8E8 /* ComeGetMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComeGetMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19F508715B12AF100AFD8E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B19F508915B12AF100AFD8E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B19F508B15B12AF100AFD8E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B19F508F15B12AF100AFD8E8 /* ComeGetMe-Info.plist */ = {isa = PBXFileReference; path = "ComeGetMe-Info.plist"; sourceTree = "<group>"; };
+		B19F508F15B12AF100AFD8E8 /* ComeGetMe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ComeGetMe-Info.plist"; sourceTree = "<group>"; };
 		B19F509115B12AF100AFD8E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B19F509315B12AF100AFD8E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B19F509515B12AF100AFD8E8 /* ComeGetMe-Prefix.pch */ = {isa = PBXFileReference; path = "ComeGetMe-Prefix.pch"; sourceTree = "<group>"; };
-		B19F509615B12AF100AFD8E8 /* HelloWorldAppDelegate.h */ = {isa = PBXFileReference; path = HelloWorldAppDelegate.h; sourceTree = "<group>"; };
+		B19F509515B12AF100AFD8E8 /* ComeGetMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComeGetMe-Prefix.pch"; sourceTree = "<group>"; };
+		B19F509615B12AF100AFD8E8 /* HelloWorldAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldAppDelegate.h; sourceTree = "<group>"; };
 		B19F509715B12AF100AFD8E8 /* HelloWorldAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldAppDelegate.m; sourceTree = "<group>"; };
 		B19F509A15B12AF100AFD8E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B19F509C15B12AF100AFD8E8 /* HelloWorldMasterViewController.h */ = {isa = PBXFileReference; path = HelloWorldMasterViewController.h; sourceTree = "<group>"; };
+		B19F509C15B12AF100AFD8E8 /* HelloWorldMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldMasterViewController.h; sourceTree = "<group>"; };
 		B19F509D15B12AF100AFD8E8 /* HelloWorldMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldMasterViewController.m; sourceTree = "<group>"; };
-		B19F509F15B12AF100AFD8E8 /* HelloWorldDetailViewController.h */ = {isa = PBXFileReference; path = HelloWorldDetailViewController.h; sourceTree = "<group>"; };
+		B19F509F15B12AF100AFD8E8 /* HelloWorldDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldDetailViewController.h; sourceTree = "<group>"; };
 		B19F50A015B12AF100AFD8E8 /* HelloWorldDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B139CC7B15B1D022009EC44C /* AddressBook.framework in Frameworks */,
+				B139CC7815B1D013009EC44C /* AddressBookUI.framework in Frameworks */,
 				B19F508815B12AF100AFD8E8 /* UIKit.framework in Frameworks */,
 				B19F508A15B12AF100AFD8E8 /* Foundation.framework in Frameworks */,
 				B19F508C15B12AF100AFD8E8 /* CoreGraphics.framework in Frameworks */,
@@ -53,6 +62,8 @@
 		B19F507815B12AF000AFD8E8 = {
 			isa = PBXGroup;
 			children = (
+				B139CC7A15B1D022009EC44C /* AddressBook.framework */,
+				B139CC7715B1D013009EC44C /* AddressBookUI.framework */,
 				B19F508D15B12AF100AFD8E8 /* ComeGetMe */,
 				B19F508615B12AF000AFD8E8 /* Frameworks */,
 				B19F508415B12AF000AFD8E8 /* Products */,
@@ -87,6 +98,8 @@
 				B19F509D15B12AF100AFD8E8 /* HelloWorldMasterViewController.m */,
 				B19F509F15B12AF100AFD8E8 /* HelloWorldDetailViewController.h */,
 				B19F50A015B12AF100AFD8E8 /* HelloWorldDetailViewController.m */,
+				B139CC7C15B1D48A009EC44C /* BAContact.h */,
+				B139CC7D15B1D48A009EC44C /* BAContact.m */,
 				B19F508E15B12AF100AFD8E8 /* Supporting Files */,
 			);
 			path = ComeGetMe;
@@ -171,6 +184,7 @@
 				B19F509815B12AF100AFD8E8 /* HelloWorldAppDelegate.m in Sources */,
 				B19F509E15B12AF100AFD8E8 /* HelloWorldMasterViewController.m in Sources */,
 				B19F50A115B12AF100AFD8E8 /* HelloWorldDetailViewController.m in Sources */,
+				B139CC7E15B1D48B009EC44C /* BAContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +296,7 @@
 				B19F50A615B12AF100AFD8E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

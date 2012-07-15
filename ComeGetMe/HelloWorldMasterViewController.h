@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface HelloWorldMasterViewController : UITableViewController
+@interface HelloWorldMasterViewController : UITableViewController <ABPeoplePickerNavigationControllerDelegate>
+
+- (IBAction)showPicker:(id)sender;
 
 @end

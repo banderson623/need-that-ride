@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BAContact.h"
 
-@interface HelloWorldAppDelegate : UIResponder <UIApplicationDelegate>
+@interface HelloWorldAppDelegate : UIResponder <UIApplicationDelegate> {
+    BAContactCollection* m_contacts;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end
