@@ -236,6 +236,8 @@
     [personRecord setName:name];
     
     [m_contacts addObject:personRecord];
+    
+    
 }
 
 
