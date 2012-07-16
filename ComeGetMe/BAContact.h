@@ -34,7 +34,7 @@
 
 - (NSUInteger)count;
 - (id)objectAtIndex:(NSUInteger)index;
-- (void)addObject:(id) contact;
+- (bool)addObject:(id) contact;
 
 
 @end

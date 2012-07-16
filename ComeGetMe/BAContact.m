@@ -47,9 +47,10 @@
 }
 
 
-- (void)addObject:(id) contact {
+- (bool)addObject:(id) contact {
     NSLog(@"Adding contact: %@",contact);
     [m_contacts addObject:contact];
+    return true;
 }
 
 

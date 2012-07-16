@@ -32,13 +32,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(showPicker:)];
     self.navigationItem.rightBarButtonItem = addButton;
-    
-//    [self insertNewRowWithTextLabel:@"Craig Fraser"];
-//    [self insertNewRowWithTextLabel:@"Brian Anderson"];
-//    [self insertNewRowWithTextLabel:@"Brett Lessing"];
     BAContact* contact = [[BAContact alloc] init];
     contact.name = @"Craig Fraser";
     contact.phoneNumber= @"408-873-1001";
@@ -117,6 +112,7 @@
     //return m_objects.count;
 }
 
+// This draws and inserts the row.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
@@ -198,7 +194,34 @@
 (ABPeoplePickerNavigationController *)peoplePicker 
       shouldContinueAfterSelectingPerson:(ABRecordRef)person {
         
-    return YES;
+    bool shouldPresentPhoneNumberPicker = true;
+    // Check if there is exactly one phone record, if there is no need to present any
+    // other option, just add it.
+    ABMultiValueRef phoneNumbers = ABRecordCopyValue(person, kABPersonPhoneProperty);
+    if(ABMultiValueGetCount(phoneNumbers) == 1){
+        // no need to take it to the next view
+        shouldPresentPhoneNumberPicker = false;
+        // Call the method to add the person's phone number.
+        [self addPerson:person
+           withProperty:kABPersonPhoneProperty
+          andIdentifier:ABMultiValueGetIdentifierAtIndex(phoneNumbers, 0)];
+
+    } else if(ABMultiValueGetCount(phoneNumbers) == 0){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops"
+                                                        message:@"Selected contact has no phone numbers"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Okay"
+                                              otherButtonTitles:nil];
+        [alert show];
+        shouldPresentPhoneNumberPicker = false;
+    }
+    
+    if(!shouldPresentPhoneNumberPicker){
+        // Close contact view
+        [self dismissModalViewControllerAnimated:YES];
+    }
+    
+    return shouldPresentPhoneNumberPicker;
 }
 
 - (BOOL)peoplePickerNavigationController: (ABPeoplePickerNavigationController *)peoplePicker
@@ -207,6 +230,7 @@
                               identifier:(ABMultiValueIdentifier)identifier
 {
     [self addPerson:person withProperty:property andIdentifier: identifier];
+    // Close contact view
     [self dismissModalViewControllerAnimated:YES];
 
     // Select a property
@@ -235,7 +259,12 @@
     [personRecord setPhoneNumberLabel: phoneLabel];
     [personRecord setName:name];
     
-    [m_contacts addObject:personRecord];
+    // If the cotnact was added, redraw row.
+    if([m_contacts addObject:personRecord]){
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([m_contacts count]- 1) inSection:0];
+        [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                              withRowAnimation:UITableViewRowAnimationLeft];
+    }
     
     
 }
