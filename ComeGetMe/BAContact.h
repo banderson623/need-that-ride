@@ -30,6 +30,7 @@
 @interface BAContactCollection : NSObject {
     NSMutableArray* m_contacts;
 }
+- (id) init;
 
 - (NSUInteger)count;
 - (id)objectAtIndex:(NSUInteger)index;

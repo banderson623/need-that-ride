@@ -32,7 +32,10 @@
 
 @implementation BAContactCollection
 
-
+- (id) init {
+    m_contacts = [[NSMutableArray alloc] init];
+    return self;
+}
 
 - (NSUInteger) count {
     return [m_contacts count];

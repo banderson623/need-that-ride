@@ -12,8 +12,9 @@
 
 @interface HelloWorldMasterViewController () {
     NSMutableArray* m_objects;
-//    BAContactCollection* m_contacts;
-    NSMutableArray* m_contacts;
+    BAContactCollection* m_contacts;
+
+//    NSMutableArray* m_contacts;
 }
 @end
 
@@ -35,7 +36,7 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(showPicker:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    [self insertNewRowWithTextLabel:@"Craig Fraser"];
+//    [self insertNewRowWithTextLabel:@"Craig Fraser"];
 //    [self insertNewRowWithTextLabel:@"Brian Anderson"];
 //    [self insertNewRowWithTextLabel:@"Brett Lessing"];
     BAContact* contact = [[BAContact alloc] init];
@@ -45,7 +46,10 @@
     
     BAContact* contact2 = [[BAContact alloc] initWithName:@"Brian Anderson" PhoneNumber:@"515-708-4355" andLabel:@"iPhone"];
 
-    m_contacts = [[NSMutableArray alloc] init];
+    if (m_contacts == nil) {
+        m_contacts = [[BAContactCollection alloc] init];
+    }
+    //m_contacts = [[NSMutableArray alloc] init];
     
     [m_contacts addObject: contact];
     [m_contacts addObject: contact2];
@@ -100,7 +104,7 @@
                           withRowAnimation:UITableViewRowAnimationLeft];
 }
 
-#pragma mark - Table Viewe
+#pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -116,7 +120,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-//    NSString* object = [m_objects objectAtIndex:indexPath.row];
     BAContact* contact = [m_contacts objectAtIndex:indexPath.row];
     
     // If we have to create a cell, do it here.
@@ -225,7 +228,6 @@
     
     NSString* phoneLabel = (__bridge NSString *)(ABAddressBookCopyLocalizedLabel(phoneLabelRef));
     NSString* phoneNumber = (__bridge_transfer NSString*) ABMultiValueCopyValueAtIndex(phoneNumbers, selection);
-
     NSString* name = [[firstName stringByAppendingString:@" " ] stringByAppendingString: lastName];
     
     BAContact* personRecord = [BAContact alloc];
