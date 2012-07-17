@@ -40,6 +40,7 @@
 - (NSUInteger)count;
 - (id)objectAtIndex:(NSUInteger)index;
 - (bool)addObject:(id) contact;
+- (void)removeObjectAtIndex:(NSUInteger)index;
 
 //- (id) initWithDictionary:(NSDictionary*) dict;
 - (id) initFromFile;

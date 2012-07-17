@@ -80,15 +80,12 @@
     return true;
 }
 
-#pragma mark Serialization
-//
-//- (id) initWithDictionary: (NSDictionary*) dict {
-//    if(self = [self init]){
-//        NSLog(@"Should use dictionary to build object");
-//    }
-//    return self;
-//}
+- (void)removeObjectAtIndex:(NSUInteger)index {
+    [m_contacts removeObjectAtIndex:index];
+}
 
+
+#pragma mark Serialization
 
 // Uses the class method filePath
 - (id) initFromFile {
