@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface PresetContactDetailViewController : UIViewController
+#import <MapKit/MapKit.h>
+                                                                // Says that it is the maps delegate
+                                                                // need to implement a couple of methods - protocol == interface
+@interface PresetContactDetailViewController : UIViewController <MKMapViewDelegate>
 
 @property (strong, nonatomic) id detailItem;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UILabel* detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet MKMapView* mapView;
 
 @end

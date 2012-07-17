@@ -16,6 +16,7 @@
 
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize mapView = m_mapView;
 
 #pragma mark - Managing the detail item
 
@@ -47,6 +48,7 @@
 
 - (void)viewDidUnload
 {
+    [self setMapView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     self.detailDescriptionLabel = nil;
@@ -55,6 +57,49 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+
+#pragma mark - MapViewDelegate
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    
+    span.latitudeDelta=0.1;
+    span.longitudeDelta=0.1;
+    
+    CLLocationCoordinate2D location=m_mapView.userLocation.coordinate;
+    
+    region.span=span;
+    region.center=location;
+    
+    [m_mapView setRegion:region animated:TRUE];
+    [m_mapView regionThatFits:region];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+}
+
+- (void)mapView:(MKMapView *)mv didAddAnnotationViews:(NSArray *)views {
+    for(MKAnnotationView *annotationView in views) {
+        if(annotationView.annotation == m_mapView.userLocation) {
+            MKCoordinateRegion region;
+            MKCoordinateSpan span;
+            
+            span.latitudeDelta=0.1;
+            span.longitudeDelta=0.1;
+            
+            CLLocationCoordinate2D location=m_mapView.userLocation.coordinate;
+            
+            region.span=span;
+            region.center=location;
+            
+            [m_mapView setRegion:region animated:TRUE];
+            [m_mapView regionThatFits:region];
+        }
+    }
 }
 
 @end
