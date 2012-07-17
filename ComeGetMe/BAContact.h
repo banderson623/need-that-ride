@@ -16,7 +16,9 @@
     NSString* phoneNumber;
 }
 
+- (id) initWithDictionary:(NSDictionary*) dict;
 - (id) initWithName: (NSString* )name PhoneNumber: (NSString*) number andLabel: (NSString*) label;
+- (NSDictionary*)dictionary;
 
 
 @property (retain) NSString* name;
@@ -30,11 +32,21 @@
 @interface BAContactCollection : NSObject {
     NSMutableArray* m_contacts;
 }
+
++ (NSString*)filePath;
+
 - (id) init;
 
 - (NSUInteger)count;
 - (id)objectAtIndex:(NSUInteger)index;
 - (bool)addObject:(id) contact;
+
+//- (id) initWithDictionary:(NSDictionary*) dict;
+- (id) initFromFile;
+//- (NSDictionary*)dictionary;
+//- (id) plist;
+- (bool) save;
+
 
 
 @end

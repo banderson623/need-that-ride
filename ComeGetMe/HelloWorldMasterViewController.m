@@ -5,7 +5,7 @@
 //  Created by Brian Anderson on 7/13/12.
 //  Copyright (c) 2012 Aeroflex. All rights reserved.
 //
-
+#import "NeedThatRideAppDelegate.h"
 #import "HelloWorldMasterViewController.h"
 #import "HelloWorldDetailViewController.h"
 #import "BAContact.h"
@@ -13,8 +13,7 @@
 @interface HelloWorldMasterViewController () {
     NSMutableArray* m_objects;
     BAContactCollection* m_contacts;
-
-//    NSMutableArray* m_contacts;
+    
 }
 @end
 
@@ -32,22 +31,25 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
+    m_contacts = ((NeedThatRideAppDelegate *)[UIApplication sharedApplication].delegate).contacts;
+    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(showPicker:)];
     self.navigationItem.rightBarButtonItem = addButton;
-    BAContact* contact = [[BAContact alloc] init];
-    contact.name = @"Craig Fraser";
-    contact.phoneNumber= @"408-873-1001";
-    contact.phoneNumberLabel = @"Mobile";
-    
-    BAContact* contact2 = [[BAContact alloc] initWithName:@"Brian Anderson" PhoneNumber:@"515-708-4355" andLabel:@"iPhone"];
 
-    if (m_contacts == nil) {
-        m_contacts = [[BAContactCollection alloc] init];
-    }
-    //m_contacts = [[NSMutableArray alloc] init];
-    
-    [m_contacts addObject: contact];
-    [m_contacts addObject: contact2];
+    //    BAContact* contact = [[BAContact alloc] init];
+//    contact.name = @"Craig Fraser";
+//    contact.phoneNumber= @"408-873-1001";
+//    contact.phoneNumberLabel = @"Mobile";
+//    
+//    BAContact* contact2 = [[BAContact alloc] initWithName:@"Brian Anderson" PhoneNumber:@"515-708-4355" andLabel:@"iPhone"];
+//
+//    if (m_contacts == nil) {
+//        m_contacts = [[BAContactCollection alloc] init];
+//    }
+//    //m_contacts = [[NSMutableArray alloc] init];
+//    
+//    [m_contacts addObject: contact];
+//    [m_contacts addObject: contact2];
 
     [self buildRowsForContacts];
     
