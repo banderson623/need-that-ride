@@ -16,7 +16,7 @@
                BlueprintIdentifier = "B19F508215B12AF000AFD8E8"
                BuildableName = "ComeGetMe.app"
                BlueprintName = "ComeGetMe"
-               ReferencedContainer = "container:ComeGetMe.xcodeproj">
+               ReferencedContainer = "container:Need that Ride.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,7 +34,7 @@
             BlueprintIdentifier = "B19F508215B12AF000AFD8E8"
             BuildableName = "ComeGetMe.app"
             BlueprintName = "ComeGetMe"
-            ReferencedContainer = "container:ComeGetMe.xcodeproj">
+            ReferencedContainer = "container:Need that Ride.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -46,6 +46,7 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      enableOpenGLFrameCaptureMode = "0"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
@@ -53,7 +54,7 @@
             BlueprintIdentifier = "B19F508215B12AF000AFD8E8"
             BuildableName = "ComeGetMe.app"
             BlueprintName = "ComeGetMe"
-            ReferencedContainer = "container:ComeGetMe.xcodeproj">
+            ReferencedContainer = "container:Need that Ride.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,7 +72,7 @@
             BlueprintIdentifier = "B19F508215B12AF000AFD8E8"
             BuildableName = "ComeGetMe.app"
             BlueprintName = "ComeGetMe"
-            ReferencedContainer = "container:ComeGetMe.xcodeproj">
+            ReferencedContainer = "container:Need that Ride.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

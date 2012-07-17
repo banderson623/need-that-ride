@@ -15,10 +15,12 @@
 		B19F508C15B12AF100AFD8E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508B15B12AF100AFD8E8 /* CoreGraphics.framework */; };
 		B19F509215B12AF100AFD8E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B19F509015B12AF100AFD8E8 /* InfoPlist.strings */; };
 		B19F509415B12AF100AFD8E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F509315B12AF100AFD8E8 /* main.m */; };
-		B19F509815B12AF100AFD8E8 /* HelloWorldAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F509715B12AF100AFD8E8 /* HelloWorldAppDelegate.m */; };
+		B19F509815B12AF100AFD8E8 /* NeedThatRideAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F509715B12AF100AFD8E8 /* NeedThatRideAppDelegate.m */; };
 		B19F509B15B12AF100AFD8E8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F509915B12AF100AFD8E8 /* MainStoryboard.storyboard */; };
-		B19F509E15B12AF100AFD8E8 /* HelloWorldMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F509D15B12AF100AFD8E8 /* HelloWorldMasterViewController.m */; };
-		B19F50A115B12AF100AFD8E8 /* HelloWorldDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F50A015B12AF100AFD8E8 /* HelloWorldDetailViewController.m */; };
+		B19F509E15B12AF100AFD8E8 /* PresetContactMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F509D15B12AF100AFD8E8 /* PresetContactMasterViewController.m */; };
+		B19F50A115B12AF100AFD8E8 /* PresetContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19F50A015B12AF100AFD8E8 /* PresetContactDetailViewController.m */; };
+		B1DAE0CA15B50E2900C54E65 /* iPhoneRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = B1DAE0C915B50E2900C54E65 /* iPhoneRetina.png */; };
+		B1DAE0CC15B50EAE00C54E65 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B1DAE0CB15B50EAE00C54E65 /* iPhone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,13 +36,15 @@
 		B19F509115B12AF100AFD8E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B19F509315B12AF100AFD8E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B19F509515B12AF100AFD8E8 /* ComeGetMe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ComeGetMe-Prefix.pch"; sourceTree = "<group>"; };
-		B19F509615B12AF100AFD8E8 /* HelloWorldAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldAppDelegate.h; sourceTree = "<group>"; };
-		B19F509715B12AF100AFD8E8 /* HelloWorldAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldAppDelegate.m; sourceTree = "<group>"; };
+		B19F509615B12AF100AFD8E8 /* NeedThatRideAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeedThatRideAppDelegate.h; sourceTree = "<group>"; };
+		B19F509715B12AF100AFD8E8 /* NeedThatRideAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeedThatRideAppDelegate.m; sourceTree = "<group>"; };
 		B19F509A15B12AF100AFD8E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B19F509C15B12AF100AFD8E8 /* HelloWorldMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldMasterViewController.h; sourceTree = "<group>"; };
-		B19F509D15B12AF100AFD8E8 /* HelloWorldMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldMasterViewController.m; sourceTree = "<group>"; };
-		B19F509F15B12AF100AFD8E8 /* HelloWorldDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldDetailViewController.h; sourceTree = "<group>"; };
-		B19F50A015B12AF100AFD8E8 /* HelloWorldDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldDetailViewController.m; sourceTree = "<group>"; };
+		B19F509C15B12AF100AFD8E8 /* PresetContactMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresetContactMasterViewController.h; sourceTree = "<group>"; };
+		B19F509D15B12AF100AFD8E8 /* PresetContactMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresetContactMasterViewController.m; sourceTree = "<group>"; };
+		B19F509F15B12AF100AFD8E8 /* PresetContactDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresetContactDetailViewController.h; sourceTree = "<group>"; };
+		B19F50A015B12AF100AFD8E8 /* PresetContactDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresetContactDetailViewController.m; sourceTree = "<group>"; };
+		B1DAE0C915B50E2900C54E65 /* iPhoneRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneRetina.png; sourceTree = "<group>"; };
+		B1DAE0CB15B50EAE00C54E65 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 		B19F507815B12AF000AFD8E8 = {
 			isa = PBXGroup;
 			children = (
+				B1DAE0CB15B50EAE00C54E65 /* iPhone.png */,
+				B1DAE0C915B50E2900C54E65 /* iPhoneRetina.png */,
 				B139CC7A15B1D022009EC44C /* AddressBook.framework */,
 				B139CC7715B1D013009EC44C /* AddressBookUI.framework */,
 				B19F508D15B12AF100AFD8E8 /* ComeGetMe */,
@@ -91,13 +97,13 @@
 		B19F508D15B12AF100AFD8E8 /* ComeGetMe */ = {
 			isa = PBXGroup;
 			children = (
-				B19F509615B12AF100AFD8E8 /* HelloWorldAppDelegate.h */,
-				B19F509715B12AF100AFD8E8 /* HelloWorldAppDelegate.m */,
+				B19F509615B12AF100AFD8E8 /* NeedThatRideAppDelegate.h */,
+				B19F509715B12AF100AFD8E8 /* NeedThatRideAppDelegate.m */,
 				B19F509915B12AF100AFD8E8 /* MainStoryboard.storyboard */,
-				B19F509C15B12AF100AFD8E8 /* HelloWorldMasterViewController.h */,
-				B19F509D15B12AF100AFD8E8 /* HelloWorldMasterViewController.m */,
-				B19F509F15B12AF100AFD8E8 /* HelloWorldDetailViewController.h */,
-				B19F50A015B12AF100AFD8E8 /* HelloWorldDetailViewController.m */,
+				B19F509C15B12AF100AFD8E8 /* PresetContactMasterViewController.h */,
+				B19F509D15B12AF100AFD8E8 /* PresetContactMasterViewController.m */,
+				B19F509F15B12AF100AFD8E8 /* PresetContactDetailViewController.h */,
+				B19F50A015B12AF100AFD8E8 /* PresetContactDetailViewController.m */,
 				B139CC7C15B1D48A009EC44C /* BAContact.h */,
 				B139CC7D15B1D48A009EC44C /* BAContact.m */,
 				B19F508E15B12AF100AFD8E8 /* Supporting Files */,
@@ -142,11 +148,11 @@
 		B19F507A15B12AF000AFD8E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = HelloWorld;
+				CLASSPREFIX = BA;
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = Aeroflex;
+				ORGANIZATIONNAME = "";
 			};
-			buildConfigurationList = B19F507D15B12AF000AFD8E8 /* Build configuration list for PBXProject "ComeGetMe" */;
+			buildConfigurationList = B19F507D15B12AF000AFD8E8 /* Build configuration list for PBXProject "Need that Ride" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -170,6 +176,8 @@
 			files = (
 				B19F509215B12AF100AFD8E8 /* InfoPlist.strings in Resources */,
 				B19F509B15B12AF100AFD8E8 /* MainStoryboard.storyboard in Resources */,
+				B1DAE0CA15B50E2900C54E65 /* iPhoneRetina.png in Resources */,
+				B1DAE0CC15B50EAE00C54E65 /* iPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,9 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19F509415B12AF100AFD8E8 /* main.m in Sources */,
-				B19F509815B12AF100AFD8E8 /* HelloWorldAppDelegate.m in Sources */,
-				B19F509E15B12AF100AFD8E8 /* HelloWorldMasterViewController.m in Sources */,
-				B19F50A115B12AF100AFD8E8 /* HelloWorldDetailViewController.m in Sources */,
+				B19F509815B12AF100AFD8E8 /* NeedThatRideAppDelegate.m in Sources */,
+				B19F509E15B12AF100AFD8E8 /* PresetContactMasterViewController.m in Sources */,
+				B19F50A115B12AF100AFD8E8 /* PresetContactDetailViewController.m in Sources */,
 				B139CC7E15B1D48B009EC44C /* BAContact.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,10 +266,13 @@
 		B19F50A515B12AF100AFD8E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brian Anderson";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ComeGetMe/ComeGetMe-Prefix.pch";
 				INFOPLIST_FILE = "ComeGetMe/ComeGetMe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2B641894-7B33-4464-BDB8-C7C0FBDAE6AD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -272,6 +283,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ComeGetMe/ComeGetMe-Prefix.pch";
 				INFOPLIST_FILE = "ComeGetMe/ComeGetMe-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -280,7 +292,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B19F507D15B12AF000AFD8E8 /* Build configuration list for PBXProject "ComeGetMe" */ = {
+		B19F507D15B12AF000AFD8E8 /* Build configuration list for PBXProject "Need that Ride" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B19F50A215B12AF100AFD8E8 /* Debug */,
