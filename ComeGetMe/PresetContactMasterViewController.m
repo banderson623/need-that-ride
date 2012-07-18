@@ -128,8 +128,9 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = [m_objects objectAtIndex:indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+//        NSDate *object = [m_objects objectAtIndex:indexPath.row];
+//        [[segue destinationViewController] setDetailItem:object];
+        [[segue destinationViewController] setContact:[m_contacts objectAtIndex:indexPath.row]];
     }
 }
 

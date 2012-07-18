@@ -8,13 +8,28 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <MessageUI/MessageUI.h>
+#import "BAContact.h"
                                                                 // Says that it is the maps delegate
                                                                 // need to implement a couple of methods - protocol == interface
-@interface PresetContactDetailViewController : UIViewController <MKMapViewDelegate>
+@interface PresetContactDetailViewController : UIViewController <MKMapViewDelegate,MFMessageComposeViewControllerDelegate>
+{
+    CLLocationManager* m_locationManager; // location manager for current location
+    CLLocationCoordinate2D m_currentUserCoordinate; // used to store the users selection
+    BAContact* m_contact;
+    NSString* m_currentUserAddress;
+    bool m_isUIEnabled;
+}
 
-@property (strong, nonatomic) id detailItem;
 
+@property (readonly) CLLocationCoordinate2D currentUserCoordinate;
 @property (strong, nonatomic) IBOutlet UILabel* detailDescriptionLabel;
 @property (weak, nonatomic) IBOutlet MKMapView* mapView;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (strong, readonly) BAContact* contact;
+@property (weak, nonatomic) IBOutlet UIButton *messageButton1;
+
+- (IBAction)messageButton1Pressed:(id)sender;
+- (void) setContact:(BAContact *)contact;
 
 @end
