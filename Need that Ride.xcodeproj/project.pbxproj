@@ -11,6 +11,8 @@
 		B139CC7B15B1D022009EC44C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B139CC7A15B1D022009EC44C /* AddressBook.framework */; };
 		B139CC7E15B1D48B009EC44C /* BAContact.m in Sources */ = {isa = PBXBuildFile; fileRef = B139CC7D15B1D48A009EC44C /* BAContact.m */; };
 		B14AEB8415B5B14F001AC4BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14AEB8315B5B14F001AC4BE /* MapKit.framework */; };
+		B1983BBD15B670E700BCAC14 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1983BBC15B670E700BCAC14 /* CoreLocation.framework */; };
+		B1983BC015B682B900BCAC14 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1983BBF15B682B900BCAC14 /* MessageUI.framework */; };
 		B19F508815B12AF100AFD8E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508715B12AF100AFD8E8 /* UIKit.framework */; };
 		B19F508A15B12AF100AFD8E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508915B12AF100AFD8E8 /* Foundation.framework */; };
 		B19F508C15B12AF100AFD8E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F508B15B12AF100AFD8E8 /* CoreGraphics.framework */; };
@@ -30,6 +32,8 @@
 		B139CC7C15B1D48A009EC44C /* BAContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAContact.h; sourceTree = "<group>"; };
 		B139CC7D15B1D48A009EC44C /* BAContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAContact.m; sourceTree = "<group>"; };
 		B14AEB8315B5B14F001AC4BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B1983BBC15B670E700BCAC14 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B1983BBF15B682B900BCAC14 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B19F508315B12AF000AFD8E8 /* ComeGetMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComeGetMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B19F508715B12AF100AFD8E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B19F508915B12AF100AFD8E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1983BC015B682B900BCAC14 /* MessageUI.framework in Frameworks */,
+				B1983BBD15B670E700BCAC14 /* CoreLocation.framework in Frameworks */,
 				B14AEB8415B5B14F001AC4BE /* MapKit.framework in Frameworks */,
 				B139CC7B15B1D022009EC44C /* AddressBook.framework in Frameworks */,
 				B139CC7815B1D013009EC44C /* AddressBookUI.framework in Frameworks */,
@@ -69,6 +75,8 @@
 		B19F507815B12AF000AFD8E8 = {
 			isa = PBXGroup;
 			children = (
+				B1983BBF15B682B900BCAC14 /* MessageUI.framework */,
+				B1983BBC15B670E700BCAC14 /* CoreLocation.framework */,
 				B14AEB8315B5B14F001AC4BE /* MapKit.framework */,
 				B1DAE0CB15B50EAE00C54E65 /* iPhone.png */,
 				B1DAE0C915B50E2900C54E65 /* iPhoneRetina.png */,
