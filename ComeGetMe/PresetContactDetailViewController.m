@@ -102,7 +102,7 @@
     if (!m_locationManager)
     {
         m_locationManager = [[CLLocationManager alloc] init];
-        [m_locationManager setDelegate:self];
+        [m_locationManager setDelegate: self];
         m_locationManager.distanceFilter = 1.0f; // we don't need to be any more accurate than 10m
         m_locationManager.purpose = @"This may be used to obtain your reverse geocoded address";
     }

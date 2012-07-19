@@ -15,6 +15,7 @@
 @synthesize name;
 @synthesize phoneNumber;
 @synthesize phoneNumberLabel;
+@synthesize recordId;
 
 - (id) initWithName: (NSString* )lname PhoneNumber: (NSString*) number andLabel: (NSString*) label {
     if(self = [super init]){
@@ -43,7 +44,6 @@
                                                      forKeys:[NSArray arrayWithObjects:@"name", @"phoneNumber", @"phoneNumberLabel", nil]];
     return dict;
 }
-
 
 
 @end

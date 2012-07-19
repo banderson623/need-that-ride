@@ -11,9 +11,10 @@
 
 
 @interface BAContact : NSObject {
-    NSString* name;
-    NSString* phoneNumberLabel;
-    NSString* phoneNumber;
+//    NSString* name;
+//    NSString* phoneNumberLabel;
+//    NSString* phoneNumber;
+    
 }
 
 - (id) initWithDictionary:(NSDictionary*) dict;
@@ -24,7 +25,7 @@
 @property (retain) NSString* name;
 @property (retain) NSString* phoneNumber;
 @property (retain) NSString* phoneNumberLabel;
-@property ABRecordID* recordId;
+@property ABRecordID recordId;
 
 @end
 
